@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
+const OPENAI_API_URL = 'https://api.openai.com/v1/responses';
 
 function buildPrompt({ project, style, area, shape, floors, mood }) {
     return `You are a senior architectural visualization prompt engineer. Create one professional, production-ready prompt for AI image/video tools.
