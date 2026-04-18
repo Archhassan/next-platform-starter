@@ -53,7 +53,7 @@ export async function POST(request) {
         }
 
         const data = await openaiResponse.json();
-        const prompt = data.output_text?.trim();
+        const prompt = data.choices?.[0]?.message?.content?.trim();
 
         if (!prompt) {
             return NextResponse.json({ error: 'No prompt text returned from OpenAI.' }, { status: 502 });
