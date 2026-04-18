@@ -43,7 +43,7 @@ export async function POST(request) {
             },
             body: JSON.stringify({
                 model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
-                input: buildPrompt({ project, style, area, shape, floors, mood })
+                messages: [{ role: 'user', content: buildPrompt({ project, style, area, shape, floors, mood }) }]
             })
         });
 
