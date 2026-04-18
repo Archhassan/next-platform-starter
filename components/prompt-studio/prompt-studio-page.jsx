@@ -104,7 +104,7 @@ export function PromptStudioPage() {
                     {activeTab === 'setup' ? <SetupTab setup={setup} onChange={updateSetup} /> : null}
                     {activeTab === 'project' ? <ProjectTab project={project} onChange={updateProject} /> : null}
                     {activeTab === 'scene-control' ? <SceneControlTab sceneControl={sceneControl} onChange={updateSceneControl} /> : null}
-                    {activeTab === 'generation' ? <GenerationTab /> : null}
+                    {activeTab === 'generation' ? <GenerationTab setup={setup} project={project} sceneControl={sceneControl} /> : null}
                     {activeTab === 'library' ? <LibraryTab /> : null}
                 </section>
 
