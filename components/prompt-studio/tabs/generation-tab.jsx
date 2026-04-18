@@ -14,7 +14,7 @@ const initialForm = {
     mood: ''
 };
 
-export function GenerationTab() {
+export function GenerationTab({ setup, project, sceneControl }) {
     const [form, setForm] = useState(initialForm);
     const [result, setResult] = useState('');
     const [error, setError] = useState('');
