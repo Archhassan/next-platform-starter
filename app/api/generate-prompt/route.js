@@ -49,7 +49,7 @@ export async function POST(request) {
 
         if (!openaiResponse.ok) {
             const errorText = await openaiResponse.text();
-            return NextResponse.json({ error: `OpenAI request failed: ${errorText}` }, { status: 502 });
+            return NextResponse.json({ error: 'OpenAI request failed. Please try again later.' }, { status: 502 });
         }
 
         const data = await openaiResponse.json();
